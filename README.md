@@ -24,4 +24,5 @@ View your app in AI Studio: https://ai.studio/apps/72bfc329-ecfe-4608-af32-3dc1b
 This project is linked with Supabase for data storage and asset hosting:
 * **Database**: Tables created and managed via the `supabase_schema.sql` schema.
 * **Storage**: Public bucket named `app-files` is used for user avatars and lesson audio files.
+* **Deploy**: Integrated with GitHub Actions for automated deployment to Cloudflare.
 
