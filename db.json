@@ -1,0 +1,662 @@
+{
+  "users": [
+    {
+      "id": 1782532182142,
+      "uid": "local_dev",
+      "email": "nvsnguyensi@gmail.com",
+      "displayName": "Người dùng",
+      "photoUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150",
+      "createdAt": "2026-06-27T03:49:42.142Z"
+    },
+    {
+      "id": 1782534426307,
+      "uid": "0b1d4b4c-a49f-4c10-a34b-fbed86cbbf26",
+      "email": "nvsnguyensi@gmail.com",
+      "displayName": "A",
+      "photoUrl": null,
+      "createdAt": "2026-06-27T04:27:06.307Z"
+    },
+    {
+      "id": 1782552850380,
+      "uid": "6f5f3d22-c3fa-4503-8749-2d54051c7130",
+      "email": "vansiazz28@gmail.com",
+      "displayName": "A",
+      "photoUrl": null,
+      "createdAt": "2026-06-27T09:34:10.380Z"
+    },
+    {
+      "id": 1782554099773,
+      "uid": "8c196316-55e9-4952-a4be-499af325c345",
+      "email": "vansiazz26@gmail.com",
+      "displayName": "C",
+      "photoUrl": null,
+      "createdAt": "2026-06-27T09:54:59.773Z"
+    },
+    {
+      "id": 1782634359419,
+      "uid": "old_admin_uid_placeholder",
+      "email": "nvsnguyensi@gmail.com",
+      "displayName": "Admin",
+      "photoUrl": null,
+      "phone": null,
+      "birthday": null,
+      "createdAt": "2026-06-28T08:12:39.419Z"
+    },
+    {
+      "id": 1782642082734,
+      "uid": "b9c5d331-26ff-4f1b-909f-38728ecde8fb",
+      "email": "nvsnguyensi@gmail.com",
+      "displayName": "admin",
+      "photoUrl": null,
+      "phone": null,
+      "birthday": null,
+      "createdAt": "2026-06-28T10:21:22.734Z"
+    },
+    {
+      "id": 1783006777611,
+      "uid": "6e07431d-48ff-4da2-841c-6f813d2859ba",
+      "email": "nvsnguyensi@gmail.com",
+      "displayName": "A",
+      "photoUrl": null,
+      "phone": null,
+      "birthday": null,
+      "createdAt": "2026-07-02T15:39:37.611Z"
+    }
+  ],
+  "stats": [
+    {
+      "userId": 1782532182142,
+      "totalLessons": 0,
+      "totalCorrect": 0,
+      "totalWrong": 0,
+      "totalXp": 0,
+      "vocabCount": 0,
+      "streak": 0,
+      "dailyProgress": {},
+      "dueCount": 0
+    },
+    {
+      "userId": 1782534426307,
+      "totalLessons": 0,
+      "totalCorrect": 0,
+      "totalWrong": 0,
+      "totalXp": 0,
+      "vocabCount": 0,
+      "streak": 0,
+      "dailyProgress": {},
+      "dueCount": 0
+    },
+    {
+      "userId": 1782552850380,
+      "totalLessons": 0,
+      "totalCorrect": 0,
+      "totalWrong": 0,
+      "totalXp": 0,
+      "vocabCount": 0,
+      "streak": 0,
+      "dailyProgress": {},
+      "dueCount": 0
+    },
+    {
+      "userId": 1782554099773,
+      "totalLessons": 0,
+      "totalCorrect": 0,
+      "totalWrong": 0,
+      "totalXp": 0,
+      "vocabCount": 0,
+      "streak": 0,
+      "dailyProgress": {},
+      "dueCount": 0
+    },
+    {
+      "userId": 1782634359419,
+      "totalLessons": 0,
+      "totalCorrect": 0,
+      "totalWrong": 0,
+      "totalXp": 0,
+      "vocabCount": 0,
+      "streak": 0,
+      "dailyProgress": {},
+      "dueCount": 0
+    },
+    {
+      "userId": 1782642082734,
+      "totalLessons": 0,
+      "totalCorrect": 0,
+      "totalWrong": 0,
+      "totalXp": 0,
+      "vocabCount": 0,
+      "streak": 0,
+      "dailyProgress": {},
+      "dueCount": 0
+    },
+    {
+      "userId": 1,
+      "totalLessons": 0,
+      "totalCorrect": 0,
+      "totalWrong": 0,
+      "totalXp": 0,
+      "vocabCount": 0,
+      "streak": 0,
+      "dailyProgress": {},
+      "dueCount": 0
+    },
+    {
+      "userId": 1783006777611,
+      "totalLessons": 0,
+      "totalCorrect": 0,
+      "totalWrong": 0,
+      "totalXp": 0,
+      "vocabCount": 0,
+      "streak": 0,
+      "dailyProgress": {}
+    }
+  ],
+  "settings": [
+    {
+      "userId": 1782532182142,
+      "groqApiKey": "",
+      "elevenLabsApiKey": "",
+      "elevenLabsVoiceId": "pNInz6ob9g9j9ffgIOFa",
+      "useGoogleTts": true,
+      "xpSettings": {
+        "wrongXp": 1,
+        "levels": {
+          "HSK1": {
+            "noHint": 10,
+            "hint1": 8,
+            "hint2": 5,
+            "hint3": 2
+          },
+          "HSK2": {
+            "noHint": 12,
+            "hint1": 10,
+            "hint2": 6,
+            "hint3": 3
+          },
+          "HSK3": {
+            "noHint": 15,
+            "hint1": 12,
+            "hint2": 8,
+            "hint3": 4
+          },
+          "HSK4": {
+            "noHint": 18,
+            "hint1": 14,
+            "hint2": 9,
+            "hint3": 5
+          },
+          "HSK5": {
+            "noHint": 20,
+            "hint1": 16,
+            "hint2": 10,
+            "hint3": 6
+          },
+          "HSK6": {
+            "noHint": 25,
+            "hint1": 20,
+            "hint2": 12,
+            "hint3": 8
+          },
+          "Nâng cao": {
+            "noHint": 30,
+            "hint1": 24,
+            "hint2": 15,
+            "hint3": 10
+          }
+        }
+      }
+    },
+    {
+      "userId": 1782534426307,
+      "groqApiKey": "",
+      "elevenLabsApiKey": "",
+      "elevenLabsVoiceId": "pNInz6ob9g9j9ffgIOFa",
+      "useGoogleTts": true,
+      "xpSettings": {
+        "wrongXp": 1,
+        "levels": {
+          "HSK1": {
+            "noHint": 10,
+            "hint1": 8,
+            "hint2": 5,
+            "hint3": 2
+          },
+          "HSK2": {
+            "noHint": 12,
+            "hint1": 10,
+            "hint2": 6,
+            "hint3": 3
+          },
+          "HSK3": {
+            "noHint": 15,
+            "hint1": 12,
+            "hint2": 8,
+            "hint3": 4
+          },
+          "HSK4": {
+            "noHint": 18,
+            "hint1": 14,
+            "hint2": 9,
+            "hint3": 5
+          },
+          "HSK5": {
+            "noHint": 20,
+            "hint1": 16,
+            "hint2": 10,
+            "hint3": 6
+          },
+          "HSK6": {
+            "noHint": 25,
+            "hint1": 20,
+            "hint2": 12,
+            "hint3": 8
+          },
+          "Nâng cao": {
+            "noHint": 30,
+            "hint1": 24,
+            "hint2": 15,
+            "hint3": 10
+          }
+        }
+      }
+    },
+    {
+      "userId": 1782552850380,
+      "groqApiKey": "",
+      "elevenLabsApiKey": "",
+      "elevenLabsVoiceId": "pNInz6ob9g9j9ffgIOFa",
+      "useGoogleTts": true,
+      "xpSettings": {
+        "wrongXp": 1,
+        "levels": {
+          "HSK1": {
+            "noHint": 10,
+            "hint1": 8,
+            "hint2": 5,
+            "hint3": 2
+          },
+          "HSK2": {
+            "noHint": 12,
+            "hint1": 10,
+            "hint2": 6,
+            "hint3": 3
+          },
+          "HSK3": {
+            "noHint": 15,
+            "hint1": 12,
+            "hint2": 8,
+            "hint3": 4
+          },
+          "HSK4": {
+            "noHint": 18,
+            "hint1": 14,
+            "hint2": 9,
+            "hint3": 5
+          },
+          "HSK5": {
+            "noHint": 20,
+            "hint1": 16,
+            "hint2": 10,
+            "hint3": 6
+          },
+          "HSK6": {
+            "noHint": 25,
+            "hint1": 20,
+            "hint2": 12,
+            "hint3": 8
+          },
+          "Nâng cao": {
+            "noHint": 30,
+            "hint1": 24,
+            "hint2": 15,
+            "hint3": 10
+          }
+        }
+      }
+    },
+    {
+      "userId": 1782554099773,
+      "groqApiKey": "",
+      "elevenLabsApiKey": "",
+      "elevenLabsVoiceId": "pNInz6ob9g9j9ffgIOFa",
+      "useGoogleTts": true,
+      "xpSettings": {
+        "wrongXp": 1,
+        "levels": {
+          "HSK1": {
+            "noHint": 10,
+            "hint1": 8,
+            "hint2": 5,
+            "hint3": 2
+          },
+          "HSK2": {
+            "noHint": 12,
+            "hint1": 10,
+            "hint2": 6,
+            "hint3": 3
+          },
+          "HSK3": {
+            "noHint": 15,
+            "hint1": 12,
+            "hint2": 8,
+            "hint3": 4
+          },
+          "HSK4": {
+            "noHint": 18,
+            "hint1": 14,
+            "hint2": 9,
+            "hint3": 5
+          },
+          "HSK5": {
+            "noHint": 20,
+            "hint1": 16,
+            "hint2": 10,
+            "hint3": 6
+          },
+          "HSK6": {
+            "noHint": 25,
+            "hint1": 20,
+            "hint2": 12,
+            "hint3": 8
+          },
+          "Nâng cao": {
+            "noHint": 30,
+            "hint1": 24,
+            "hint2": 15,
+            "hint3": 10
+          }
+        }
+      }
+    },
+    {
+      "userId": 1782634359419,
+      "groqApiKey": "",
+      "elevenLabsApiKey": "",
+      "elevenLabsVoiceId": "pNInz6ob9g9j9ffgIOFa",
+      "useGoogleTts": true,
+      "xpSettings": {
+        "wrongXp": 1,
+        "levels": {
+          "HSK1": {
+            "noHint": 10,
+            "hint1": 8,
+            "hint2": 5,
+            "hint3": 2
+          },
+          "HSK2": {
+            "noHint": 12,
+            "hint1": 10,
+            "hint2": 6,
+            "hint3": 3
+          },
+          "HSK3": {
+            "noHint": 15,
+            "hint1": 12,
+            "hint2": 8,
+            "hint3": 4
+          },
+          "HSK4": {
+            "noHint": 18,
+            "hint1": 14,
+            "hint2": 9,
+            "hint3": 5
+          },
+          "HSK5": {
+            "noHint": 20,
+            "hint1": 16,
+            "hint2": 10,
+            "hint3": 6
+          },
+          "HSK6": {
+            "noHint": 25,
+            "hint1": 20,
+            "hint2": 12,
+            "hint3": 8
+          },
+          "Nâng cao": {
+            "noHint": 30,
+            "hint1": 24,
+            "hint2": 15,
+            "hint3": 10
+          }
+        }
+      }
+    },
+    {
+      "userId": 1782642082734,
+      "groqApiKey": "",
+      "elevenLabsApiKey": "",
+      "elevenLabsVoiceId": "pNInz6ob9g9j9ffgIOFa",
+      "useGoogleTts": true,
+      "xpSettings": {
+        "wrongXp": 1,
+        "levels": {
+          "HSK1": {
+            "noHint": 10,
+            "hint1": 8,
+            "hint2": 5,
+            "hint3": 2
+          },
+          "HSK2": {
+            "noHint": 12,
+            "hint1": 10,
+            "hint2": 6,
+            "hint3": 3
+          },
+          "HSK3": {
+            "noHint": 15,
+            "hint1": 12,
+            "hint2": 8,
+            "hint3": 4
+          },
+          "HSK4": {
+            "noHint": 18,
+            "hint1": 14,
+            "hint2": 9,
+            "hint3": 5
+          },
+          "HSK5": {
+            "noHint": 20,
+            "hint1": 16,
+            "hint2": 10,
+            "hint3": 6
+          },
+          "HSK6": {
+            "noHint": 25,
+            "hint1": 20,
+            "hint2": 12,
+            "hint3": 8
+          },
+          "Nâng cao": {
+            "noHint": 30,
+            "hint1": 24,
+            "hint2": 15,
+            "hint3": 10
+          }
+        }
+      }
+    },
+    {
+      "userId": 1,
+      "groqApiKey": "",
+      "elevenLabsApiKey": "",
+      "elevenLabsVoiceId": "pNInz6ob9g9j9ffgIOFa",
+      "useGoogleTts": true,
+      "xpSettings": {
+        "wrongXp": 1,
+        "levels": {
+          "HSK1": {
+            "noHint": 10,
+            "hint1": 8,
+            "hint2": 5,
+            "hint3": 2
+          },
+          "HSK2": {
+            "noHint": 12,
+            "hint1": 10,
+            "hint2": 6,
+            "hint3": 3
+          },
+          "HSK3": {
+            "noHint": 15,
+            "hint1": 12,
+            "hint2": 8,
+            "hint3": 4
+          },
+          "HSK4": {
+            "noHint": 18,
+            "hint1": 14,
+            "hint2": 9,
+            "hint3": 5
+          },
+          "HSK5": {
+            "noHint": 20,
+            "hint1": 16,
+            "hint2": 10,
+            "hint3": 6
+          },
+          "HSK6": {
+            "noHint": 25,
+            "hint1": 20,
+            "hint2": 12,
+            "hint3": 8
+          },
+          "Nâng cao": {
+            "noHint": 30,
+            "hint1": 24,
+            "hint2": 15,
+            "hint3": 10
+          }
+        }
+      }
+    },
+    {
+      "userId": 1783006777611,
+      "groqApiKey": "",
+      "elevenLabsApiKey": "",
+      "elevenLabsVoiceId": "pNInz6ob9g9j9ffgIOFa",
+      "useGoogleTts": true,
+      "xpSettings": {
+        "wrongXp": 1,
+        "levels": {
+          "HSK1": {
+            "noHint": 10,
+            "hint1": 8,
+            "hint2": 5,
+            "hint3": 2
+          },
+          "HSK2": {
+            "noHint": 12,
+            "hint1": 10,
+            "hint2": 6,
+            "hint3": 3
+          },
+          "HSK3": {
+            "noHint": 15,
+            "hint1": 12,
+            "hint2": 8,
+            "hint3": 4
+          },
+          "HSK4": {
+            "noHint": 18,
+            "hint1": 14,
+            "hint2": 9,
+            "hint3": 5
+          },
+          "HSK5": {
+            "noHint": 20,
+            "hint1": 16,
+            "hint2": 10,
+            "hint3": 6
+          },
+          "HSK6": {
+            "noHint": 25,
+            "hint1": 20,
+            "hint2": 12,
+            "hint3": 8
+          },
+          "Nâng cao": {
+            "noHint": 30,
+            "hint1": 24,
+            "hint2": 15,
+            "hint3": 10
+          }
+        }
+      }
+    }
+  ],
+  "vocabulary": [],
+  "revisionItems": [],
+  "lessons": [
+    {
+      "id": "lesson_hsk2_shopping",
+      "title": "Mua sắm ở siêu thị tiện lợi",
+      "level": "HSK2",
+      "topic": "đời sống",
+      "createdAt": "2026-06-27T03:48:23.249Z"
+    },
+    {
+      "id": "lesson_hsk3_travel",
+      "title": "Hỏi đường khi đi du lịch tự túc",
+      "level": "HSK3",
+      "topic": "du lịch",
+      "createdAt": "2026-06-27T03:48:23.249Z"
+    },
+    {
+      "id": "lesson_hsk4_office",
+      "title": "Báo cáo công việc và kế hoạch tuần",
+      "level": "HSK4",
+      "topic": "công việc",
+      "createdAt": "2026-06-27T03:48:23.249Z"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "sent_hsk2_1",
+      "lessonId": "lesson_hsk2_shopping",
+      "chinese": "这件衣服多少钱？",
+      "pinyin": "Zhè jiàn yīfu duōshao qián?",
+      "translation": "Bộ quần áo này bao nhiêu tiền?",
+      "explanation": "1. 这 (zhè): đây, này.\n2. 件 (jiàn): lượng từ cho quần áo, sự việc.\n3. 衣服 (yīfu): quần áo.\n4. 多少 (duōshao): bao nhiêu.\n5. 钱 (qián): tiền.",
+      "audioUrl": ""
+    },
+    {
+      "id": "sent_hsk2_2",
+      "lessonId": "lesson_hsk2_shopping",
+      "chinese": "这里可以刷卡吗？",
+      "pinyin": "Zhèlǐ kěyǐ shuākǎ ma?",
+      "translation": "Ở đây có thể quẹt thẻ không?",
+      "explanation": "1. 这里 (zhèlǐ): ở đây.\n2. 可以 (kěyǐ): có thể.\n3. 刷卡 (shuākǎ): quẹt thẻ, quẹt tín dụng.\n4. 吗 (ma): trợ từ nghi vấn.",
+      "audioUrl": ""
+    },
+    {
+      "id": "sent_hsk3_1",
+      "lessonId": "lesson_hsk3_travel",
+      "chinese": "请问，去火车站怎么走？",
+      "pinyin": "Qǐngwèn, qù huǒchēzhàn zěnme zǒu?",
+      "translation": "Xin hỏi, đi đến ga tàu hỏa đi như thế nào?",
+      "explanation": "1. 请问 (qǐngwèn): xin hỏi lịch sự.\n2. 去 (qù): đi đến.\n3. 火车站 (huǒchēzhàn): ga tàu hỏa.\n4. 怎么走 (zěnme zǒu): đi đường nào, đi như thế nào.",
+      "audioUrl": ""
+    },
+    {
+      "id": "sent_hsk3_2",
+      "lessonId": "lesson_hsk3_travel",
+      "chinese": "这个地方离这里很远，你最好坐地铁去。",
+      "pinyin": "Zhège dìfang lí zhèlǐ hěn yuǎn, nǐ zuìhǎo zuò dìtiě qù.",
+      "translation": "Nơi này cách đây rất xa, tốt nhất bạn nên đi tàu điện ngầm.",
+      "explanation": "1. 离 (lí): cách.\n2. 远 (yuǎn): xa.\n3. 最好 (zuìhǎo): tốt nhất nên.\n4. 坐 (zuò): ngồi, đi (xe, tàu).\n5. 地铁 (dìtiě): tàu điện ngầm.",
+      "audioUrl": ""
+    },
+    {
+      "id": "sent_hsk4_1",
+      "lessonId": "lesson_hsk4_office",
+      "chinese": "我们必须在下周五前完成这个项目。",
+      "pinyin": "Wǒmen bìxū zài xià zhōuwǔ qián wánchéng zhège xiàngmù.",
+      "translation": "Chúng ta phải hoàn thành dự án này trước thứ Sáu tuần tới.",
+      "explanation": "1. 必须 (bìxū): nhất định phải.\n2. 下周五 (xià zhōuwǔ): thứ Sáu tuần sau.\n3. 完成 (wánchéng): hoàn thành.\n4. 项目 (xiàngmù): dự án, hạng mục.",
+      "audioUrl": ""
+    }
+  ],
+  "customAvatars": []
+}

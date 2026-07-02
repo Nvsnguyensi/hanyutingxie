@@ -1,0 +1,6 @@
+{
+  "name": "Chép Chính Tả Tiếng Trung",
+  "description": "Ứng dụng luyện nghe chép chính tả tiếng Trung cá nhân thông minh với AI sinh câu, chấm điểm chi tiết và ôn tập SRS.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
