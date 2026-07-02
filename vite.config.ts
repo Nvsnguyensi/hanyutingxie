@@ -4,6 +4,8 @@ import path from 'path';
 import fs from 'fs';
 import {defineConfig, loadEnv} from 'vite';
 
+import { cloudflare } from "@cloudflare/vite-plugin";
+
 export default defineConfig(({ mode }) => {
   // Load env file based on `mode` in the current working directory.
   // Set the third parameter to '' to load all envs regardless of the `VITE_` prefix.
@@ -28,7 +30,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     base: '/',
-    plugins: [react(), tailwindcss()],
+    plugins: [react(), tailwindcss(), cloudflare()],
     define: {
       'import.meta.env.VITE_SUPABASE_URL': JSON.stringify(supabaseUrl),
       'import.meta.env.VITE_SUPABASE_ANON_KEY': JSON.stringify(supabaseAnonKey),
