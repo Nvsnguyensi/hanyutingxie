@@ -1,4 +1,4 @@
-name: Deploy Worker
+name: Deploy to Cloudflare Pages
 on:
   push:
     branches:
@@ -17,9 +17,9 @@ jobs:
         env:
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
-      - name: Deploy to Cloudflare
+      - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-
+          command: pages deploy dist --project-name=hanyutingxie
