@@ -1,5 +1,0 @@
-name = "hanyutingxie"
-compatibility_date = "2024-03-01"
-
-[assets]
-directory = "./dist"
