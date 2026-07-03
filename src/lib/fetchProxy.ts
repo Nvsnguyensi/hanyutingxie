@@ -432,19 +432,15 @@ const customFetch = async function (input: RequestInfo | URL, init?: RequestInit
         return res;
       }
       
-      // If the response is HTML (e.g. static hosting returning index.html for 404 paths) or error status, fall back to localStorage
-      if (contentType.includes("text/html") || res.status === 404 || res.status === 500) {
-        if (isSupabaseEnabled) {
-          return res;
-        }
+      // If the response is HTML (static hosting returning index.html for unknown /api/* paths)
+      // or error status, ALWAYS fall back to localStorage emulator.
+      // This handles Cloudflare Workers static-only deployments where there is no Express backend.
+      if (contentType.includes("text/html") || res.status === 404 || res.status === 405 || res.status === 500) {
         return await emulateApi(urlStr, newInit.method || "GET", String(newInit.body || ""));
       }
       
       return res;
     } catch (netErr) {
-      if (isSupabaseEnabled) {
-        throw netErr;
-      }
       // Server is offline or blocked (connection refused / DNS lookup failed) - fallback to emulator
       return await emulateApi(urlStr, newInit.method || "GET", String(newInit.body || ""));
     }
