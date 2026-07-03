@@ -1,4 +1,3 @@
-import { auth, isFirebaseEnabled } from "../firebase";
 import { isSupabaseEnabled } from "../supabase";
 
 const originalFetch = window.fetch;
@@ -407,19 +406,6 @@ const customFetch = async function (input: RequestInfo | URL, init?: RequestInit
   if (urlStr.includes("/api/")) {
     const newInit = init ? { ...init } : {};
     const headers = new Headers(newInit.headers || {});
-    
-    if (isFirebaseEnabled && auth) {
-      try {
-        const currentUser = auth.currentUser;
-        if (currentUser) {
-          const token = await currentUser.getIdToken();
-          headers.set("Authorization", `Bearer ${token}`);
-        }
-      } catch (err) {
-        console.error("Lỗi đính kèm token Firebase trong fetchProxy:", err);
-      }
-    }
-    
     newInit.headers = headers;
 
     // TRY THE LIVE NETWORK REQUEST

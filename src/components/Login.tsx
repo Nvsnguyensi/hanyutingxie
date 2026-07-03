@@ -1,13 +1,4 @@
 import React, { useState } from "react";
-import { 
-  auth as firebaseAuth, 
-  isFirebaseEnabled,
-  createUserWithEmailAndPassword as firebaseCreateUser, 
-  signInWithEmailAndPassword as firebaseSignIn, 
-  sendPasswordResetEmail as firebaseReset,
-  updateProfile as firebaseUpdateProfile,
-  signInWithFacebook as firebaseSignInWithFacebook
-} from "../firebase";
 import {
   isSupabaseEnabled,
   supabaseUrl,
@@ -17,7 +8,6 @@ import {
   createUserWithEmailAndPassword as supabaseCreateUser,
   signInWithEmailAndPassword as supabaseSignIn,
   sendPasswordResetEmail as supabaseReset,
-  updateProfile as supabaseUpdateProfile,
   signInWithFacebook as supabaseSignInWithFacebook
 } from "../supabase";
 import { Loader2, Mail, Lock, LogIn, UserPlus, Info, CheckCircle2, ShieldAlert, ArrowLeft, KeyRound } from "lucide-react";
@@ -43,7 +33,7 @@ export default function Login({ isSyncing = false }: LoginProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!isSupabaseEnabled && !isFirebaseEnabled) {
+    if (!isSupabaseEnabled) {
       setMessage({
         type: "error",
         text: "Hệ thống xác thực chưa được cấu hình. Đang chạy ở chế độ Demo cục bộ.",
@@ -56,26 +46,13 @@ export default function Login({ isSyncing = false }: LoginProps) {
 
     try {
       if (isForgot) {
-        if (isSupabaseEnabled) {
-          await supabaseReset(email);
-        } else {
-          await firebaseReset(firebaseAuth, email);
-        }
-
+        await supabaseReset(email);
         setMessage({
           type: "success",
           text: "Yêu cầu đặt lại mật khẩu đã được gửi! Vui lòng kiểm tra email của bạn để nhận liên kết khôi phục (hãy kiểm tra cả hộp thư rác/spam).",
         });
       } else if (isRegister) {
-        if (isSupabaseEnabled) {
-          await supabaseCreateUser(email, password, fullName);
-        } else {
-          const userCredential = await firebaseCreateUser(firebaseAuth, email, password);
-          await firebaseUpdateProfile(userCredential.user, {
-            displayName: fullName || email.split("@")[0],
-          });
-        }
-
+        await supabaseCreateUser(email, password, fullName);
         setPassword("");
         setMode("login");
         setMessage({
@@ -83,65 +60,32 @@ export default function Login({ isSyncing = false }: LoginProps) {
           text: "Tài khoản của bạn đã được khởi tạo thành công. Vui lòng đăng nhập.",
         });
       } else {
-        if (isSupabaseEnabled) {
-          try {
-            await supabaseSignIn(email, password);
-            setMessage({
-              type: "success",
-              text: "Đăng nhập thành công! Đang chuyển hướng...",
-            });
-            setTimeout(() => {
-              window.location.href = "/";
-            }, 800);
-          } catch (signInError: any) {
-            // Auto register on wrong password / missing account to provide the seamless login/signup experience
-            if (signInError.status === 400 || signInError.message?.toLowerCase().includes("invalid login credentials")) {
-              try {
-                await supabaseCreateUser(email, password, email.split("@")[0]);
-                setMessage({
-                  type: "success",
-                  text: "Đăng ký và Đăng nhập thành công! Đang chuyển hướng...",
-                });
-                setTimeout(() => {
-                  window.location.href = "/";
-                }, 800);
-              } catch (signUpErr) {
-                throw signInError;
-              }
-            } else {
+        try {
+          await supabaseSignIn(email, password);
+          setMessage({
+            type: "success",
+            text: "Đăng nhập thành công! Đang chuyển hướng...",
+          });
+          setTimeout(() => {
+            window.location.href = "/";
+          }, 800);
+        } catch (signInError: any) {
+          // Auto register on wrong password / missing account
+          if (signInError.status === 400 || signInError.message?.toLowerCase().includes("invalid login credentials")) {
+            try {
+              await supabaseCreateUser(email, password, email.split("@")[0]);
+              setMessage({
+                type: "success",
+                text: "Đăng ký và Đăng nhập thành công! Đang chuyển hướng...",
+              });
+              setTimeout(() => {
+                window.location.href = "/";
+              }, 800);
+            } catch (signUpErr) {
               throw signInError;
             }
-          }
-        } else {
-          try {
-            await firebaseSignIn(firebaseAuth, email, password);
-            setMessage({
-              type: "success",
-              text: "Đăng nhập thành công! Đang chuyển hướng...",
-            });
-            setTimeout(() => {
-              window.location.href = "/";
-            }, 800);
-          } catch (signInError: any) {
-            if (signInError.code === "auth/user-not-found" || signInError.code === "auth/invalid-credential") {
-              try {
-                const userCredential = await firebaseCreateUser(firebaseAuth, email, password);
-                await firebaseUpdateProfile(userCredential.user, {
-                  displayName: email.split("@")[0],
-                });
-                setMessage({
-                  type: "success",
-                  text: "Đăng ký và Đăng nhập thành công! Đang chuyển hướng...",
-                });
-                setTimeout(() => {
-                  window.location.href = "/";
-                }, 800);
-              } catch (signUpErr) {
-                throw signInError;
-              }
-            } else {
-              throw signInError;
-            }
+          } else {
+            throw signInError;
           }
         }
       }
@@ -168,23 +112,17 @@ export default function Login({ isSyncing = false }: LoginProps) {
   };
 
   const handleFacebookLogin = async () => {
-    if (!isSupabaseEnabled && !isFirebaseEnabled) {
+    if (!isSupabaseEnabled) {
       setMessage({
         type: "error",
-        text: "Hệ thống xác thực chưa được cấu hình. Đang chạy ở chế độ Demo cục bộ.",
+        text: "Hệ thống xác thực chưa được cấu hình.",
       });
       return;
     }
-
     setLoading(true);
     setMessage(null);
-
     try {
-      if (isSupabaseEnabled) {
-        await supabaseSignInWithFacebook();
-      } else {
-        await firebaseSignInWithFacebook();
-      }
+      await supabaseSignInWithFacebook();
       setMessage({
         type: "success",
         text: "Đang chuyển hướng tới trang đăng nhập Facebook...",

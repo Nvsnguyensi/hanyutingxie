@@ -9,12 +9,7 @@ import DictionaryDrawer from "./components/DictionaryDrawer";
 import Login from "./components/Login";
 import ResetPassword from "./components/ResetPassword";
 import UserProfileModal from "./components/UserProfileModal";
-import { 
-  auth as firebaseAuth, 
-  logoutUser as firebaseLogoutUser, 
-  isFirebaseEnabled, 
-  mapFirebaseUser 
-} from "./firebase";
+// Firebase removed - using Supabase only
 import { 
   auth as supabaseAuth, 
   logoutUser as supabaseLogoutUser, 
@@ -218,37 +213,6 @@ export default function App() {
       };
     }
 
-    if (isFirebaseEnabled) {
-      // Listen for auth state changes using Firebase
-      const unsubscribe = firebaseAuth.onAuthStateChanged(async (fbUser) => {
-        if (fbUser) {
-          const mapped = mapFirebaseUser(fbUser);
-          const isSameUser = lastLoadedUserIdRef.current === mapped.uid;
-          setUser(mapped);
-          setIsAuthLoading(false);
-          if (!isSameUser) {
-            lastLoadedUserIdRef.current = mapped.uid;
-            setIsLoading(true);
-            await loadAppData();
-            if (mapped.uid === "b9c5d331-26ff-4f1b-909f-38728ecde8fb" || mapped.uid === "d8b2806e-77e7-4852-89d6-fb9b33222d63" || mapped.uid === "Wx15T6MdBpes6hUznG3P4NDqjH13" || mapped.email === "nvsnguyensi@gmail.com") {
-              setActiveTab("admin");
-            }
-            if (window.location.pathname === "/login") {
-              window.history.pushState(null, "", "/");
-            }
-          }
-        } else {
-          lastLoadedUserIdRef.current = null;
-          setUser(null);
-          setIsAuthLoading(false);
-          setIsLoading(false);
-        }
-      });
-
-      return () => {
-        unsubscribe();
-      };
-    }
 
     // Graceful local demo mode
     setUser({
@@ -313,8 +277,6 @@ export default function App() {
     try {
       if (isSupabaseEnabled) {
         await supabaseLogoutUser();
-      } else if (isFirebaseEnabled) {
-        await firebaseLogoutUser();
       }
       setUser(null);
       setActiveTab("dashboard");
