@@ -25,4 +25,6 @@ This project is linked with Supabase for data storage and asset hosting:
 * **Database**: Tables created and managed via the `supabase_schema.sql` schema.
 * **Storage**: Public bucket named `app-files` is used for user avatars and lesson audio files.
 * **Deploy**: Integrated with GitHub Actions for automated deployment to Cloudflare.
+* **Git Auth**: Configured via SSH key for secure access.
+
 
